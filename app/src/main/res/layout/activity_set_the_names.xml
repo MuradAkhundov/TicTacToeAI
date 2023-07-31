@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SetTheNamesActivity"
+    android:background="@color/dark_blue">
+
+
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Set Your \n Name"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/linearLy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/autour_one"/>
+
+    <LinearLayout
+        android:id="@+id/linearLy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <EditText
+            android:id="@+id/playerFirstEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textview"
+            android:hint="Player 1 "
+            android:fontFamily="@font/autour_one"
+            android:maxLines="1"
+            android:maxLength="15"
+            android:layout_marginStart="50dp"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@id/playerSecondEditTxt"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/edit_text_bg"
+            android:textColorHint="#737373"
+            />
+
+
+        <EditText
+            android:id="@+id/playerSecondEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/playerFirstEditTxt"
+            android:hint="Player 2 "
+            android:fontFamily="@font/autour_one"
+            android:layout_marginStart="50dp"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:layout_marginTop="60dp"
+            app:layout_constraintBottom_toTopOf="@id/startbtn"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/edit_text_bg"
+            android:textColorHint="#737373"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/startbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:backgroundTint="#00BCD4"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/linearLy"
+        android:fontFamily="@font/autour_one"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
